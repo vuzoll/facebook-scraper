@@ -6,7 +6,7 @@ String url = 'https://www.facebook.com/yaroslav.yermilov'
 Document document = Jsoup.connect(url).get()
 
 def educationElement = document.select(':containsOwn(КНУ им. Т. Г. Шевченко)').parents()[1]
-def educationText = educationElement.text()
+def educationText = educationElement.select(':containsOwn(Випуск)').text()
 
 println educationElement.html()
 
