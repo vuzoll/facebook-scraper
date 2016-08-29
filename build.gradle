@@ -11,5 +11,7 @@ repositories {
 dependencies {
     compile 'org.codehaus.groovy:groovy-all:2.4.7'
 
+    compile 'org.jsoup:jsoup:1.9.2'
+
     testCompile 'org.spockframework:spock-core:1.0-groovy-2.4'
 }
