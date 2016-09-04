@@ -15,7 +15,10 @@ class FacebookScraperTest extends Specification {
         !actual.raw.isEmpty()
 
         actual.name == 'Yaroslav Yermilov'
-        actual.town == 'Kyiv, Ukraine'
+
+        actual.locations.size() == 1
+        actual.locations[0].name == 'Kyiv, Ukraine'
+        actual.locations[0].since == null
 
         actual.education.size() == 1
         actual.education[0].university == 'КНУ им. Т. Г. Шевченко'
@@ -41,7 +44,10 @@ class FacebookScraperTest extends Specification {
         !actual.raw.isEmpty()
 
         actual.name == 'Vlad Grytsun'
-        actual.town == 'Kyiv, Ukraine'
+
+        actual.locations.size() == 1
+        actual.locations[0].name == 'Mountain View, California'
+        actual.locations[0].since == '1 лютого 2014 р.'
 
         actual.education.size() == 1
         actual.education[0].university == 'КНУ им. Т. Г. Шевченко'
@@ -67,7 +73,8 @@ class FacebookScraperTest extends Specification {
         !actual.raw.isEmpty()
 
         actual.name == 'Andrii Usachov'
-        actual.town == 'Kyiv, Ukraine'
+
+        actual.locations == null
 
         actual.education.size() == 1
         actual.education[0].university == 'КНУ им. Т. Г. Шевченко'
@@ -92,8 +99,11 @@ class FacebookScraperTest extends Specification {
         then:
         !actual.raw.isEmpty()
 
-        actual.name == 'Andrii Usachov'
-        actual.town == 'Kyiv, Ukraine'
+        actual.name == 'Dmytro Ignatenko'
+
+        actual.locations.size() == 1
+        actual.locations[0].name == 'Kyiv, Ukraine'
+        actual.locations[0].since == null
 
         actual.education.size() == 1
         actual.education[0].university == 'КНУ им. Т. Г. Шевченко'
@@ -119,7 +129,10 @@ class FacebookScraperTest extends Specification {
         !actual.raw.isEmpty()
 
         actual.name == 'Mykola Terelya'
-        actual.town == 'Kyiv, Ukraine'
+
+        actual.locations.size() == 1
+        actual.locations[0].name == 'Kyiv, Ukraine'
+        actual.locations[0].since == null
 
         actual.education.size() == 1
         actual.education[0].university == 'КНУ им. Т. Г. Шевченко'

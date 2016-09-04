@@ -5,9 +5,10 @@ class VuzollRecord {
     String raw
 
     String name
-    String town
 
-    Collection<EducationRecord> education = new ArrayList<>()
+    Collection<LocationRecord> locations
 
-    Collection<CareerRecord> career = new ArrayList<>()
+    Collection<EducationRecord> education
+
+    Collection<CareerRecord> career
 }
