@@ -1,8 +1,11 @@
 package com.github.vuzoll.facebook.scraper
 
-class VuzollRecord {
+import groovy.transform.EqualsAndHashCode
+import groovy.transform.ToString
 
-    String raw
+@EqualsAndHashCode
+@ToString
+class VuzollRecord {
 
     String name
 
